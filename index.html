@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speed Typing Master</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="container">
         <h1>Speed Typing Master</h1>
-    </div>
-</body>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">Time</div>
+                <div class="stat-value" id="time">0s</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">WPM</div>
+                <div class="stat-value" id="wpm">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Accuracy</div>
+                <div class="stat-value" id="accuracy">0%</div>
+            </div>
+        </div>
 
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="quote-display" id="quoteDisplay"></div>
+        <textarea id="quoteInput" class="quote-input" placeholder="Type the text here as soon as the game starts..." autofocus></textarea>
+        
+        <div class="btn-container">
+            <button id="startBtn" class="btn">Start Game</button>
+            <button id="newQuoteBtn" class="btn btn-secondary">Try Again</button>
+        </div>
+    </div>
+
+    <div class="result-modal" id="resultModal">
+        <div class="modal-content">
+            <h2 class="result-title">Your Results</h2>
+            
+            <div class="result-stats">
+                <div class="result-stat">
+                    <div class="result-stat-value" id="wpm-value">0</div>
+                    <div class="result-stat-label">Words/Min</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-stat-value" id="accuracy-value">0%</div>
+                    <div class="result-stat-label">Accuracy</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-stat-value" id="time-value">0s</div>
+                    <div class="result-stat-label">Time</div>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="resultProgressBar"></div>
+            </div>
+
+            <p id="feedback-message"></p>
+            
+            <button id="closeModalBtn" class="btn">Continue</button>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
 </html>
